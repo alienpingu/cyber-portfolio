@@ -1,3 +1,5 @@
+// Google Fonts
+
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
 // Color
@@ -32,6 +34,11 @@ body,html {
 *, body, html {
 	font-family: 'IBM Plex Mono', monospace;
 }
+
+
+
+
+// -------------------------------------------
 
 #root {
 	display: flex;
@@ -99,10 +106,9 @@ body,html {
 
 #topbar {
 	position: fixed;
-	display: inline-flex;
+	display: flex;
 	width: 100%;
 	background: $primary-background;
-	color: black;
 	box-sizing: border-box;
 	border-bottom: 1px solid $secondary-color;
 	.ico-container {
@@ -111,6 +117,7 @@ body,html {
 		justify-content: center;
 		text-decoration:none;
 		margin: $base-unit/2 0;
+		margin-left: -$base-unit;
 		p {
 			font-size: $base-unit*2.5;
 			color: $primary-color;
@@ -127,6 +134,35 @@ body,html {
 	}
 }
 
+#bottombar {
+	position: absolute;
+	left: 0;
+	bottom: 0; 
+	width: 100%;
+	display: flex;
+	align-items: center;
+	background: $primary-background;
+	box-sizing: border-box;
+	border-top: 1px solid $secondary-color;
+
+	.ico {
+		display: flex;
+		margin: $base-unit/2;
+		svg {
+			color: $primary-color;
+			height:2.5rem;
+			width: 2.5rem;
+		}
+	}
+
+	.route {
+		color: $primary-color;
+		margin-left: auto;
+		margin-right: $base-unit;
+		text-transform: uppercase;
+		min-width: 10rem;
+	}
+}
 
 // Views
 
@@ -167,9 +203,8 @@ body,html {
 #service {
 	width: 100%;
 	padding: 0 $base-unit;
-	margin-top: $base-unit*4;
+	margin: $base-unit*4.5 0;
 	overflow-y: scroll;
-	margin-bottom: $base-unit*4;
 
 	h1 {
 			color: $primary-color;
@@ -195,6 +230,7 @@ body,html {
 	.skill-container {
 		background: $primary-background;
 		padding: $base-unit;
+		margin: $base-unit 0;
 		p {
 		    display: flex;
 		    flex-direction: row;
@@ -211,12 +247,13 @@ body,html {
 }
 
 #project {
-	margin-top: $base-unit*4.5;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 	padding: 0 $base-unit*2;
+	margin: $base-unit*4.5 0;
 	overflow-y: scroll;
+
 	.project-container {
 		.project {
 			border: 1px solid $primary-color;
@@ -256,11 +293,13 @@ body,html {
 }
 
 #contact {
-	margin-top: $base-unit*4.5;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 	padding: 0 $base-unit*2;
+	margin: $base-unit*4.5 0;
+	overflow-y: scroll;
+
 	h1 {
 		color: $primary-color;
 	}
@@ -347,7 +386,8 @@ body,html {
 
 	#landing {
 		.btn-container {
-			display: inline-flex; 
+			display: flex;
+			flex-direction:  row;
 			.btn {
 				width: auto;
 				margin: $base-unit $base-unit*2;

@@ -8,12 +8,10 @@ import {
   Route
 } from "react-router-dom";
 
-import Sound from 'react-sound';
-import Info from './static/assets/sounds/typing.mp3';
-
 import './static/assets/scss/styles.scss';
 
 import TopBar from './static/assets/components/TopBar';
+import BottomBar from './static/assets/components/BottomBar';
 import Landing from './static/assets/components/Landing';
 import Service from './static/assets/components/Service';
 import Project from './static/assets/components/Project';
@@ -25,18 +23,12 @@ class App extends Component {
 
         super(props);
         this.state = {
-            route: "landing",
             config: {
               name: "Samuele Bertocco",
               info: {
                 "desc": "Jr. Full Stack Developer",
                 "email": "samuele.bertocco@gmail.com",
                 "tg": "brtsml"
-              },
-              color: {
-                primary: "",
-                secondary: "",
-                theme: ""
               }
             }
           }
@@ -50,8 +42,8 @@ class App extends Component {
       <Router>
         <Particles
           style={{ position: "absolute" }}
-          height="95%"
-          width="95%"
+          height="100%"
+          width="100%"
           params={{
             particles: {
               color: {
@@ -73,56 +65,26 @@ class App extends Component {
         />
         
 
-        <TopBar />
         <Switch>
           <Route path="/project">
+            <TopBar />
             <Project  parentDataConfig={this.state.config}/>
-            <Sound
-              url={Info}
-              playStatus={Sound.status.PLAYING}
-              playFromPosition={0}
-              onLoading={this.handleSongLoading}
-              onPlaying={this.handleSongPlaying}
-              onFinishedPlaying={this.handleSongFinishedPlaying}
-            />
+            <BottomBar />
           </Route>
           <Route path="/service">
+            <TopBar />
             <Service  parentDataConfig={this.state.config}/>
-            <Sound
-              url={Info}
-              playStatus={Sound.status.PLAYING}
-              playFromPosition={0}
-              onLoading={this.handleSongLoading}
-              onPlaying={this.handleSongPlaying}
-              onFinishedPlaying={this.handleSongFinishedPlaying}
-            />
+            <BottomBar />
           </Route>
           <Route path="/contact">
+            <TopBar />
             <Contact  parentDataConfig={this.state.config}/>
-            <Sound
-              url={Info}
-              playStatus={Sound.status.PLAYING}
-              playFromPosition={0}
-              onLoading={this.handleSongLoading}
-              onPlaying={this.handleSongPlaying}
-              onFinishedPlaying={this.handleSongFinishedPlaying}
-            />
+            <BottomBar />
           </Route>
            <Route path="/">
             <Landing  parentDataConfig={this.state.config}/>
-            <Sound
-              url={Info}
-              playStatus={Sound.status.PLAYING}
-              playFromPosition={0}
-              onLoading={this.handleSongLoading}
-              onPlaying={this.handleSongPlaying}
-              onFinishedPlaying={this.handleSongFinishedPlaying}
-            />
           </Route>
         </Switch>
-
-
-        
       </Router>)
 
 

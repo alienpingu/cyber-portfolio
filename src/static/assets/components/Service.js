@@ -33,25 +33,24 @@ class Service extends Component {
     return(
           <div id="service">
             <h1>Service</h1>
-            <div className="card-container">
-
-              <div className="card corner"> 
-                <h2>Website development</h2>
-                <p>Using the latest technologies, i can turn your scratch or idea in a real website.</p>
+              <div className="card-container">
+                <div className="card corner"> 
+                  <h2>Website development</h2>
+                  <p>Using the latest technologies, i can turn your scratch or idea in a real website.</p>
+                </div>
+                <div className="card corner"> 
+                  <h2>WebApp development</h2>
+                  <p>ReactJS is a powerfull tool for build webapp, the future is now!</p>
+                </div>
+                <div className="card corner"> 
+                  <h2>API development</h2>
+                  <p>An API for all service, custom request and response for your app, bot or website</p>
+                </div>
+                <div className="card corner"> 
+                  <h2>Jr. Full Stack Developer</h2>
+                  <p>I can work on your project to add functionality or fix a problem.</p>
+                </div>
               </div>
-              <div className="card corner"> 
-                <h2>WebApp development</h2>
-                <p>ReactJS is a powerfull tool for build webapp, the future is now!</p>
-              </div>
-              <div className="card corner"> 
-                <h2>API development</h2>
-                <p>An API for all service, custom request and response for your app, bot or website</p>
-              </div>
-              <div className="card corner"> 
-                <h2>Jr. Full Stack Developer</h2>
-                <p>I can work on your project to add functionality or fix a problem.</p>
-              </div>
-            </div>
             <h1>Skills</h1>
             <div className="skill-container corner">
               <p><Icon icon={alphaFBoxOutline} />Figma</p>

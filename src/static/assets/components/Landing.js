@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 
+import Typing from 'react-typing-animation';
+
+
 import Hero from '../img/hero.svg';
 
 class Landing extends Component {
@@ -20,12 +23,13 @@ class Landing extends Component {
             <img src={Hero} alt="ico" />
             <div className="text">
               <h1>{this.state.name}</h1>
-              <p>{this.state.info.desc}</p>
+              
+              <Typing><p>{this.state.info.desc}</p></Typing>
             </div>
             <div className="btn-container">
-              <Link to="/contact" className="btn corner">Contact</Link>
               <Link to="/service" className="btn corner">Services</Link>
               <Link to="/project" className="btn corner">Project</Link>
+              <Link to="/contact" className="btn corner">Contact</Link>
             </div>
           </div>
       );

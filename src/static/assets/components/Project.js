@@ -14,13 +14,9 @@ class Service extends Component {
 	constructor(props) {
 		super(props);
 
-		this.state = {
-
-		}
+		this.state = {}
 
 	}
-	
-	changeView = (route) => this.props.parentClickHandler(route)
 
 
 	render() {
