@@ -22,7 +22,7 @@ function BottomBar () {
             </Link>
           	<Typing className="route" speed={1}>
 			    Route: 
-			    <Typing.Speed ms={200} />
+			    <Typing.Speed ms={10} />
 			    {path}
 		  	</Typing>
         </div>

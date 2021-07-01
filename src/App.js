@@ -44,6 +44,7 @@ class App extends Component {
           style={{ position: "absolute" }}
           height="100%"
           width="100%"
+          className="d-none d-md-block"
           params={{
             particles: {
               color: {

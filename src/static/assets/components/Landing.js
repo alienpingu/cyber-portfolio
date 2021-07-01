@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 
-import Typing from 'react-typing-animation';
-
 
 import Hero from '../img/hero.svg';
 
@@ -24,7 +22,7 @@ class Landing extends Component {
             <div className="text">
               <h1>{this.state.name}</h1>
               
-              <Typing><p>{this.state.info.desc}</p></Typing>
+             <p>{this.state.info.desc}</p>
             </div>
             <div className="btn-container">
               <Link to="/service" className="btn corner">Services</Link>
