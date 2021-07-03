@@ -14,14 +14,14 @@ function Contact () {
                 <a href="https://www.t.me/brtsml"><Icon icon={telegramIcon} />brtsml</a>
               </div>
               <div className="contact-form">
-                <form method="post" action="#">
+                <form method="POST" action="https://mailthis.to/samuele.bertocco@gmail.com" encType="multipart/form-data">
                   
                   <label htmlFor="email">Name</label>
-                  <input type="text" name="name" />
-                  <label htmlFor="email">E-mail</label>
-                  <input type="text" name="email" />
+                  <input type="text" name="name" required/>
+                  <label htmlFor="_replyto">E-mail</label>
+                  <input type="email" name="_replyto" required/>
                   <label htmlFor="message">Message</label>
-                  <input className="message" type="text" name="message" />
+                  <input className="message" type="text" name="message" required/>
                   <button className="btn corner" type="submit" value="submit">Send!</button>
                 </form>
               </div>

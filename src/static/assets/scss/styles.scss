@@ -255,6 +255,7 @@ body,html {
 	overflow-y: scroll;
 
 	.project-container {
+		display: grid;
 		.project {
 			border: 1px solid $primary-color;
 			background: $primary-background;
@@ -287,6 +288,18 @@ body,html {
 				padding-top: 0;
 				margin: 0;
 			}
+			a.link-container {
+				display: flex;
+				flex-direction:column;
+				align-items: flex-end;
+				color: $primary-color;
+				font-size: $base-unit*2;
+				text-decoration: none;
+				svg {
+					padding: $base-unit;
+				}
+			}
+
 		}
 
 	}
@@ -421,8 +434,8 @@ body,html {
 		padding-right:15rem;
 		.project-container {
 			display: grid;
-			grid-template-columns: repeat(3, 33%);
-			grid-column-gap: $base-unit/2;
+			grid-template-columns: repeat( 3, auto );
+			grid-column-gap: $base-unit;
 		}
 	}
 	#contact {
